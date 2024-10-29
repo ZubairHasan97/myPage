@@ -372,6 +372,10 @@ label input {
   width: 100%;
 }
 
+.right-align {
+    text-align: right;
+}
+
 .download-btn {
     display: inline-block;
     padding: 10px 20px;
