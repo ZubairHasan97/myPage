@@ -408,7 +408,15 @@ label input {
   height: calc(var(--line-height) / 2);
   border-left: var(--border-thickness) solid var(--text-color);
 }
-
+.censored {
+	background: #000;
+	color: #000;
+}
+.censored {
+	color: var(--background-color);
+	color: transparent;
+	background: var(--text-color);
+}
 .grid {
   --grid-cells: 0;
   display: flex;
