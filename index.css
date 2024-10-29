@@ -6,7 +6,7 @@
   --border-thickness: 2px;
   --text-color: #000;
   --text-color-alt: #666;
-  --background-color: #0f0f0f;
+  --background-color: #fff;
   --background-color-alt: #eee;
 
   --font-weight-normal: 500;
@@ -142,9 +142,42 @@ table {
   margin: 0 0 calc(var(--line-height) * 2);
 }
 
+.passport-photo {
+  width: 150px; /* Set width to around 150px for passport size */
+  height: 180px; /* Set height to maintain the square shape */
+  border: 2px solid #ffffff; /* Optional: Add a border */
+  border-radius: 0px; /* Slightly rounded corners, if desired */
+  object-fit: cover; /* Ensures the photo fills the space without distortion */
+  /* float: right;
+  margin-left: 20px; */
+}
+
+.right-align {
+    text-align: right;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    border-color: #ffffff;
+    border-radius: 0px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 th, td {
   border: var(--border-thickness) solid var(--text-color);
-  padding: 
+  padding:
     calc((var(--line-height) / 2))
     calc(1ch - var(--border-thickness) / 2)
     calc((var(--line-height) / 2) - (var(--border-thickness)))
@@ -177,7 +210,15 @@ th {
 .header tr td:last-child {
   text-align: right;
 }
-
+.censored {
+	background: #000;
+	color: #000;
+}
+.censored {
+	color: var(--background-color);
+	color: transparent;
+	background: var(--text-color);
+}
 p {
   word-break: break-word;
   word-wrap: break-word;
@@ -273,7 +314,7 @@ ul ul {
   padding: 0 0 0 3ch;
   margin: 0;
 }
-ol li:before { 
+ol li:before {
   content: counters(item, ".") ". ";
   counter-increment: item;
   font-weight: var(--font-weight-medium);
@@ -294,7 +335,7 @@ li::marker {
 
 input, button, textarea {
   border: var(--border-thickness) solid var(--text-color);
-  padding: 
+  padding:
     calc(var(--line-height) / 2 - var(--border-thickness))
     calc(1ch - var(--border-thickness));
   margin: 0;
@@ -372,29 +413,6 @@ label input {
   width: 100%;
 }
 
-.right-align {
-    text-align: right;
-}
-
-.download-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #000000;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    border-color: #ffffff;
-    border-radius: 0px;
-    transition: background-color 0.3s;
-}
-
-.download-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
 .tree, .tree ul {
   position: relative;
   padding-left: 0;
@@ -431,15 +449,7 @@ label input {
   height: calc(var(--line-height) / 2);
   border-left: var(--border-thickness) solid var(--text-color);
 }
-.censored {
-	background: #000;
-	color: #000;
-}
-.censored {
-	color: var(--background-color);
-	color: transparent;
-	background: var(--text-color);
-}
+
 .grid {
   --grid-cells: 0;
   display: flex;
