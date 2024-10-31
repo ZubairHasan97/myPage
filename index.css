@@ -143,13 +143,43 @@ table {
 }
 
 .passport-photo {
-  width: 150px; /* Set width to around 150px for passport size */
-  height: 180px; /* Set height to maintain the square shape */
+  width: 180px; /* Set width to around 150px for passport size */
+  height: 200px; /* Set height to maintain the square shape */
   border: 2px solid #ffffff; /* Optional: Add a border */
   border-radius: 0px; /* Slightly rounded corners, if desired */
   object-fit: cover; /* Ensures the photo fills the space without distortion */
-  /* float: right;
-  margin-left: 20px; */
+}
+
+/* Basic styling for the text */
+.typing-container {
+    white-space: nowrap;
+    overflow: hidden; /* Ensures text stays in one line */
+    border-right: 7px solid #fff; /* Simulate cursor */
+    display: inline-block;
+    position: relative;
+    width: fit-content;
+    animation: typing 3s steps(35, end), blink-caret 0.8s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 30%; }
+}
+
+.typing-container::after {
+            content: ""; /* Empty content for the cursor */
+            position: absolute;
+            right: 0;
+            width: 0px;
+            height: 100%;
+            background-color: #000;
+            animation: blink-caret 0.8s step-end infinite; /* Continuous blinking */
+        }
+
+/* Blinking animation */
+@keyframes blink-caret {
+    50% { border-color: transparent; }
 }
 
 .right-align {
