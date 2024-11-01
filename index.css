@@ -145,7 +145,7 @@ table {
 .passport-photo {
   width: 180px; /* Set width to around 150px for passport size */
   height: 200px; /* Set height to maintain the square shape */
-  border: 2px solid #ffffff; /* Optional: Add a border */
+  /* border: 2px solid #ffffff; /* Optional: Add a border */ 
   border-radius: 0px; /* Slightly rounded corners, if desired */
   object-fit: cover; /* Ensures the photo fills the space without distortion */
 }
